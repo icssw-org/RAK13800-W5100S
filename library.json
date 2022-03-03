@@ -1,0 +1,32 @@
+{
+	"name": "RAKwireless_W5100S",
+	"version": "1.0.0",
+	"keywords": [
+		"Ethernet",
+		"W5100S",
+		"RAKWireless",
+		"WisBlock",
+		"RAK13800"
+	],
+	"description": "RAKWireless library for the RAK13800 Ethernet Module",
+	"frameworks": [
+		"arduino"
+	],
+	"platforms": [
+		"*"
+	],
+	"license": "GNU",
+	"authors": [
+		{
+			"email": "nero.du@rakwireless.com",
+			"url": "https://rakwireless.com",
+			"maintainer": true,
+			"name": "Nero"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/RAKWireless/RAKwireless_W5100S"
+	},
+	"homepage": "https://rakwireless.com"
+}
