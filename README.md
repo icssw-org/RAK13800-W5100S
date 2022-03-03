@@ -1,7 +1,7 @@
 | <center><img src="./assets/rakstar.jpg" alt="RAKstar" width=25%></center>  | ![RAKWireless](./assets/RAK-Whirls.png) | [![Build Status](https://github.com/RAKWireless/RAK13800_W5100S/workflows/RAK%20Library%20Build%20CI/badge.svg)](https://github.com/RAKWireless/RAK13800_W5100S/actions) |
 | -- | -- | -- |
 
-# RAKwireless_W5100S_Ethernet_library
+# RAK13800_W5100S_Ethernet_library
 
 Rakwireless W5100S Ethernet library is modified from Arduino Ethernet library (V2.0.0) for the Arduino platform, because this library is very comprehensive and supports W5100/W5200/W5500 devices. We have added support for W5100S and made adaptations to RAK4631, RAK11200, and RAK11300 platforms.
 
@@ -21,12 +21,12 @@ Or install the library project dependencies by adding
 
 ```log
 lib_deps =
-  RAKWireless/RAKwireless_W5100S
+  RAKWireless/RAK13800_W5100S
 ```
 
 into **`platformio.ini`**
 
-For manual installation download the archive, unzip it and place the RAKwireless_W5100S folder into the library directory.
+For manual installation download the archive, unzip it and place the RAK13800_W5100S folder into the library directory.
 In Arduino IDE this is usually <arduinosketchfolder>/libraries/
 In PlatformIO this is usually <user/.platformio/lib>
 

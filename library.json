@@ -1,5 +1,5 @@
 {
-	"name": "RAKwireless_W5100S",
+	"name": "RAK13800_W5100S",
 	"version": "1.0.0",
 	"keywords": [
 		"Ethernet",
@@ -26,7 +26,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/RAKWireless/RAKwireless_W5100S"
+		"url": "https://github.com/RAKWireless/RAK13800_W5100S"
 	},
 	"homepage": "https://rakwireless.com"
 }
