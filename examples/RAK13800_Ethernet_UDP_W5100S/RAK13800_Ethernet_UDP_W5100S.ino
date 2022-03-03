@@ -7,7 +7,7 @@
    @copyright Copyright (c) 2021
 **/
 
-#include <RAK13800_W5100S.h> // Click to install library: http://librarymanager/All#RAKwireless_W5100S
+#include <RAK13800_W5100S.h> // Click to install library: http://librarymanager/All#RAK13800_W5100S
 
 #define LOCAL_PORT   8888    // Set the server port.
 

@@ -8,7 +8,7 @@
 **/
 
 #include <SPI.h>
-#include <RAK13800_W5100S.h>   // Click to install library: http://librarymanager/All#RAKwireless_W5100S
+#include <RAK13800_W5100S.h>   // Click to install library: http://librarymanager/All#RAK13800_W5100S
 #include <ArduinoMqttClient.h> // Click to install library: http://librarymanager/All#ArduinoMqttClient
 
 #define USER_NAME     "admin"       // Provide a username and password for authentication.
