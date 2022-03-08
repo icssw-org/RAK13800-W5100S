@@ -50,8 +50,13 @@
 
 #include <Arduino.h>
 #include "Client.h"
-#include "Server.h"
 #include "Udp.h"
+
+#ifdef _VARIANT_RAK11200_
+	#include "RewriteServer.h"
+#else
+	#include "Server.h"
+#endif
 
 enum EthernetLinkStatus {
 	Unknown,
@@ -254,24 +259,47 @@ private:
 	uint16_t _timeout;
 };
 
+#if defined(_VARIANT_RAK11200_)
+	class EthernetServer : public RewriteServer 
+	{
+	private:
+		uint16_t _port;
+	public:
+		EthernetServer(uint16_t port) : _port(port) { }
+		EthernetClient available();
+		EthernetClient accept();
+		virtual void begin();
+		virtual size_t write(uint8_t);
+		virtual size_t write(const uint8_t *buf, size_t size);
+		virtual operator bool();
+		using Print::write;
+		//void statusreport();
 
-class EthernetServer : public Server {
-private:
-	uint16_t _port;
-public:
-	EthernetServer(uint16_t port) : _port(port) { }
-	EthernetClient available();
-	EthernetClient accept();
-	virtual void begin();
-	virtual size_t write(uint8_t);
-	virtual size_t write(const uint8_t *buf, size_t size);
-	virtual operator bool();
-	using Print::write;
-	//void statusreport();
+		// TODO: make private when socket allocation moves to EthernetClass
+		static uint16_t server_port[MAX_SOCK_NUM];
+	};
+#else 
+	class EthernetServer : public Server 
+	{
+	private:
+		uint16_t _port;
+	public:
+		EthernetServer(uint16_t port) : _port(port) { }
+		EthernetClient available();
+		EthernetClient accept();
+		virtual void begin();
+		virtual size_t write(uint8_t);
+		virtual size_t write(const uint8_t *buf, size_t size);
+		virtual operator bool();
+		using Print::write;
+		//void statusreport();
 
-	// TODO: make private when socket allocation moves to EthernetClass
-	static uint16_t server_port[MAX_SOCK_NUM];
-};
+		// TODO: make private when socket allocation moves to EthernetClass
+		static uint16_t server_port[MAX_SOCK_NUM];
+	};
+#endif
+
+
 
 
 class DhcpClass {
