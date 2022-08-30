@@ -1,6 +1,6 @@
 {
-	"name": "RAK13800_W5100S",
-	"version": "1.0.0",
+	"name": "RAK13800-W5100S",
+	"version": "1.0.1",
 	"keywords": [
 		"Ethernet",
 		"W5100S",
@@ -15,7 +15,7 @@
 	"platforms": [
 		"*"
 	],
-	"license": "GNU",
+	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
 			"email": "nero.du@rakwireless.com",

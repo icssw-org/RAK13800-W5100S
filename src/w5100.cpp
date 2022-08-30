@@ -316,6 +316,12 @@ W5100Linkstatus W5100Class::getLinkStatus()
 		SPI.endTransaction();
 		if (phystatus & 0x01) return LINK_ON;
 		return LINK_OFF;
+	  case 51:
+		SPI.beginTransaction(SPI_ETHERNET_SETTINGS);
+		phystatus = readPSTATUS_W5100s();
+		SPI.endTransaction();
+		if (phystatus & 0x01) return LINK_ON;
+		return LINK_OFF;
 	  case 52:
 		SPI.beginTransaction(SPI_ETHERNET_SETTINGS);
 		phystatus = readPSTATUS_W5200();
