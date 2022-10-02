@@ -58,6 +58,15 @@ void EthernetUDP::stop()
 	}
 }
 
+// KBC check
+int EthernetUDP::check()
+{
+  if (sockindex < MAX_SOCK_NUM)
+    return 0;
+  else
+    return -1;
+}
+
 int EthernetUDP::beginPacket(const char *host, uint16_t port)
 {
 	// Look up the host first
